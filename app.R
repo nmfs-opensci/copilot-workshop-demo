@@ -18,7 +18,7 @@ get_erddap_dates <- function() {
     time_meta <- info_obj$alldata$time
     # actual_range row contains "start, end" epoch seconds
     range_row  <- time_meta[time_meta$attribute_name == "actual_range", "value"]
-    # nValues row gives the count and spacing
+    # Dimension rows have an empty attribute_name; the nValues row describes spacing
     nval_row   <- time_meta[time_meta$attribute_name == "" &
                               grepl("nValues", time_meta$value), "value"]
 
@@ -221,7 +221,7 @@ server <- function(input, output, session) {
         fillOpacity = 0.85,
         popup  = ~paste0(
           "<b>Grid Cell ID:</b> ", cell_id, "<br>",
-          "<b>Mean SST:</b> ", round(sst, 2), " °C<br>",
+          "<b>SST:</b> ", round(sst, 2), " °C<br>",
           "<b>Lon:</b> ", round(lon, 3), "<br>",
           "<b>Lat:</b> ", round(lat, 3)
         )

@@ -1,6 +1,6 @@
 # NWFSC Survey Grid SST Shiny App
 
-An R Shiny application that visualises **Mean Sea Surface Temperature (SST)**
+An R Shiny application that visualises **Sea Surface Temperature (SST)**
 on NWFSC trawl-survey grid points along the US West Coast.
 
 ---
@@ -14,7 +14,7 @@ on NWFSC trawl-survey grid points along the US West Coast.
 * Displays an interactive **Leaflet** map centred on the WA/OR coast.
 * Colours each grid point by its SST value using the **viridis** palette and
   shows a colour legend.
-* Clicking a point opens a popup with the **Grid Cell ID** and **Mean SST (°C)**.
+* Clicking a point opens a popup with the **Grid Cell ID** and **SST (°C)**.
 * Gracefully handles unavailable dates with an informative message instead of
   crashing.
 
@@ -78,7 +78,7 @@ If it does not open automatically, navigate to the URL shown in the console
 1. The date picker is pre-populated with the full range of dates available on
    the ERDDAP server.  Select a date and click **Fetch SST**.
 2. Grid points will appear on the map coloured by SST.
-3. Click any point to see its **Grid Cell ID** and **Mean SST (°C)** in a popup.
+3. Click any point to see its **Grid Cell ID** and **SST (°C)** in a popup.
 4. If the selected date has no data on the server a message is displayed in the
    sidebar – simply choose another date.
 
